@@ -4,10 +4,10 @@
     padding: 0;
 }
 html{
-    font-size: 92.5%;
+    background-color: white;
 }
 body{
-    background-color:white;
+    background-size: 5rem;
 }
 #grid_container{
     display: grid;
@@ -23,7 +23,10 @@ header{
     height: 100px;
 }
 .container-fluid{
-    color: white;
+    
+}
+.container-fluid img{
+justify-content: center;
 }
 div{
     background-color: rgb(200, 132, 221);
@@ -33,7 +36,6 @@ div{
     height: 150px;
     width: 150px;
 }
-
 #navbarNav{
     justify-content: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -47,10 +49,11 @@ h2{display: flex;
 }
 footer{
     grid-area: footer;
+    align-items: center;
 }
 /*movile first*/
 main{
-    height: 100vh;
+    height: 80vh;
     padding-top: 50px;
     padding-bottom: 70%;
 }
@@ -76,6 +79,14 @@ footer ul li a{
 }
 
 @media screen and (min-width:768px){
+    #grid_container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "header header header"
+        "main main main"
+        "footer footer footer";
+    }
     
     header{
         height: 100%;
@@ -83,5 +94,33 @@ footer ul li a{
     }
     footer{
         background-color: rgb(200, 132, 221);
-        height: 5rem;
+        height: 10rem;
     }
+body{
+    height:100% ;
+    width: 100%;
+}
+.navbar-collapse{
+    flex-grow: 0;
+    margin-right: 50px;
+}
+.container-fluid{
+}
+
+.container-fluid img{
+    height: 100px;
+    width: 130px;
+}
+.iframe_container{
+    display: flex;
+    justify-content: center;
+    }
+footer ul li img{
+    
+    height: 100px;
+    width: 100px;
+}
+div h4{
+    background-color: rgb(143, 176, 206);
+}
+
